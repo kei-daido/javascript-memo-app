@@ -2,11 +2,11 @@ let memos = JSON.parse(localStorage.getItem("memos")) || [];
 
 let currentSearch = "";
 
-const saveMemoButton = document.getElementById("saveMemoButton");
+const addMemoButton = document.getElementById("addMemoButton");
 const searchInput = document.getElementById("searchInput");
 
-saveMemoButton.addEventListener("click", function () {
-  saveMemo();
+addMemoButton.addEventListener("click", function () {
+  addMemo();
 });
 
 searchInput.addEventListener("input", function () {
@@ -100,7 +100,7 @@ function renderMemos() {
   }
 }
 
-function saveMemo() {
+function addMemo() {
   const memoTitleInput = document.getElementById("memoTitleInput");
   const memoTitleText = memoTitleInput.value.trim();
 
